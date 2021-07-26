@@ -1,0 +1,25 @@
+1.Menu active/hover design
+https://dev.to/mike37/15-css-hover-effects-example-3pbh
+
+2.Social Media(9. Expandable Social Icons)
+https://csshint.com/bootstrap-social-media-icons/
+
+3. social icon (profile pic)
+https://webtend.net/demo/html/landio/team.html
+
+4. CSS Page Heading / Title Styles
+https://codepen.io/Wking/pen/BdmpVx
+https://codepen.io/vedadesigns/full/GPxYZg
+
+
+5.button(100 Days CSS Button N 045)
+https://www.sliderrevolution.com/resources/css-button-hover-effects/
+
+Title animation
+Nav Hovers(Underline Fill)
+
+6.happy client
+https://bestjquery.com/tutorial/counter/demo154/
+
+7.service box
+http://bestjquery.com/tutorial/service-box/demo177/
