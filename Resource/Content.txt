@@ -1,3 +1,5 @@
+http://innovationplans.com/idesign/alex/
+
 1.Menu active/hover design
 https://dev.to/mike37/15-css-hover-effects-example-3pbh
 
@@ -23,3 +25,63 @@ https://bestjquery.com/tutorial/counter/demo154/
 
 7.service box
 http://bestjquery.com/tutorial/service-box/demo177/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ====== Navgition ======  -->
+      <nav class="navbar navbar-default">
+         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#nav-icon-collapse"
+                  aria-expanded="false"
+               >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </button>
+
+               <!-- logo -->
+               <a href="#">
+                  <div class="logo"><span>Alex</span> Smith</div>
+               </a>
+            </div>
+
+            <!-- Collect the nav links, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav-icon-collapse">
+               <!-- links -->
+               <ul class="nav navbar-nav navbar-right">
+                  <li>
+                     <a href="#" data-scroll-nav="0" class="active">Home</a>
+                  </li>
+                  <li><a href="#" data-scroll-nav="1">About</a></li>
+                  <li><a href="#" data-scroll-nav="2">Skills</a></li>
+                  <li><a href="#" data-scroll-nav="3">Resume</a></li>
+                  <li><a href="#" data-scroll-nav="4">Services</a></li>
+                  <li><a href="#" data-scroll-nav="5">Work</a></li>
+                  <li><a href="#" data-scroll-nav="6">Blog</a></li>
+                  <li><a href="#" data-scroll-nav="7">Contact</a></li>
+               </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container -->
+      </nav>
+      <!-- ====== End Navgition ======  -->
