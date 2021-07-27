@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Alex</title>
+      <title>AT</title>
       <meta
          name="description"
          content="Alex is a responsive creative template"
@@ -48,7 +48,13 @@
       <script src="js/html5shiv.min.js"></script>
       <!--[endif]-->
    </head>
-   <body>
+   <body
+      class="position-relative"
+      data-bs-spy="scroll"
+      data-bs-target="#navbar"
+      data-bs-offset="0"
+      tabindex="0"
+   >
       <!-- ====== Preloader ======  -->
       <!-- <div class="loading">
 			<div class="load-circle"><span class="one"></span></div>
@@ -67,10 +73,9 @@
          <button value="main" class="main">Reset</button>
          <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
       </div>
-
       <!-- ====== Navgition ======  -->
-      <header>
-         <nav class="navbar navbar-expand-lg navbar-light">
+      <header class="sticky-top">
+         <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
             <div class="container">
                <a href="#">
                   <div class="logo"><span>Abu</span> Talha</div>
@@ -90,21 +95,20 @@
                   class="collapse navbar-collapse d-lg-flex justify-content-end"
                   id="navbarNav"
                >
-                  <ul class="navbar-nav navbar-right">
+                  <ul class="nav navbar-nav navbar-right">
                      <li class="nav-item">
                         <a
-                           class="active"
-                           data-scroll-nav="0"
+                           class="active nav-link"
                            aria-current="page"
-                           href="#"
+                           href="#home"
                            >Home</a
                         >
                      </li>
                      <li class="nav-item">
-                        <a class=" " data-scroll-nav="1" href="#">Features</a>
+                        <a class="nav-link" href="#hero">Features</a>
                      </li>
                      <li class="nav-item">
-                        <a class=" " data-scroll-nav="2" href="#">Pricing</a>
+                        <a class="nav-link" href="#skills">Pricing</a>
                      </li>
                   </ul>
                </div>
@@ -112,14 +116,8 @@
          </nav>
       </header>
       <!-- ====== End Navgition ======  -->
-
       <!-- ====== Header ======  -->
-      <section
-         id="home"
-         class="header"
-         data-scroll-index="0"
-         data-stellar-background-ratio="0.5"
-      >
+      <section id="home" class="header">
          <div class="container">
             <div class="v-middle">
                <div class="caption">
@@ -136,7 +134,7 @@
       <!-- ====== End Header ======  -->
 
       <!-- ====== Hero ======  -->
-      <section id="hero" class="hero section-padding" data-scroll-index="1">
+      <section id="hero" class="hero section-padding">
          <div class="container">
             <div class="row">
                <div class="section-border">
@@ -212,7 +210,8 @@
                                     </li>
                                     <li></li>
                                     <li>
-                                       Address : <span>Los Angeles, USA</span>
+                                       Address :
+                                       <span>Los Angeles, USA</span>
                                     </li>
                                  </ul>
                               </div>
@@ -251,11 +250,7 @@
       <!-- ====== End Hero ======  -->
 
       <!-- ====== Skills ======  -->
-      <section
-         id="skills"
-         class="skills section-padding section-gray"
-         data-scroll-index="2"
-      >
+      <section id="skills" class="skills section-padding section-gray">
          <div class="container">
             <div class="row">
                <div class="section-border">
@@ -374,7 +369,9 @@
             <div class="row">
                <div class="section-border">
                   <div class="content">
-                     <h4 class="main-title text-center mb-100">My Resume.</h4>
+                     <h4 class="main-title text-center mb-100">
+                        My Resume.
+                     </h4>
 
                      <div class="col-md-6">
                         <div class="column-left">
@@ -879,7 +876,9 @@
             <div class="row">
                <div class="section-border">
                   <div class="content">
-                     <h4 class="main-title text-center mb-80">Testimonials.</h4>
+                     <h4 class="main-title text-center mb-80">
+                        Testimonials.
+                     </h4>
 
                      <div class="col-md-offset-2 col-md-8">
                         <div class="owl-carousel owl-theme">
@@ -947,7 +946,9 @@
             <div class="row">
                <div class="section-border">
                   <div class="content">
-                     <h4 class="main-title text-center mb-80">Get In Touch.</h4>
+                     <h4 class="main-title text-center mb-80">
+                        Get In Touch.
+                     </h4>
 
                      <div class="col-md-7">
                         <form
@@ -1122,7 +1123,7 @@
       ></script>
 
       <!-- scrollIt -->
-      <script src="js/scrollIt.min.js"></script>
+      <!-- <script src="js/scrollIt.min.js"></script> -->
 
       <!-- magnific-popup -->
       <script src="js/jquery.magnific-popup.min.js"></script>
@@ -1150,6 +1151,22 @@
 
       <!-- custom script -->
       <script src="js/custom.js"></script>
+      <script>
+         $('document').ready(function () {
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+               target: '#navbar',
+            });
+         });
+
+         $(window).on('scroll', function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > 200) {
+               $('.navbar').addClass('nav-scroll');
+            } else {
+               $('.navbar').removeClass('nav-scroll');
+            }
+         });
+      </script>
    </body>
 
    <!-- Mirrored from innovationplans.com/idesign/alex/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Jul 2021 13:27:15 GMT -->

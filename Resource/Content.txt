@@ -2,6 +2,8 @@ http://innovationplans.com/idesign/alex/
 
 1.Menu active/hover design
 https://dev.to/mike37/15-css-hover-effects-example-3pbh
+https://www.littlesnippets.net/snip1275
+https://codepen.io/Calloumi/pen/vndlH
 
 2.Social Media(9. Expandable Social Icons)
 https://csshint.com/bootstrap-social-media-icons/
