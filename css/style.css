@@ -26,6 +26,9 @@ TABLE OF CONTENTS
                      Global 
 -------------------------------------------------------- */
 @import url(main.css);
+:root {
+   --theme-clr: #3b414c;
+}
 body {
    font-family: 'Montserrat', sans-serif;
    color: #353535;
@@ -36,37 +39,6 @@ body {
    padding: 80px 0;
 }
 
-.section-border {
-   position: relative;
-   padding: 80px;
-}
-.section-border .content {
-   position: relative;
-   z-index: 9;
-}
-.section-border:after,
-.section-border:before {
-   content: '';
-   border: 10px solid #f4f4f4;
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   z-index: 0;
-}
-.section-border:before {
-   top: 15px;
-   left: 15px;
-}
-
-.section-gray {
-   background: #f7f7f7;
-}
-.section-gray .section-border:after,
-.section-gray .section-border:before {
-   border-color: #fff;
-}
 .section-gray .main-title {
    color: #999;
 }
@@ -155,12 +127,13 @@ p {
    box-shadow: 0px 0px 10px #eae8e8;
    cursor: pointer;
 }
-.color-switch button {
+.color-switch button:not(.main) {
    width: 20px;
    margin: 2px;
    height: 20px;
    line-height: 20px;
    border: 0;
+   border-radius: 50%;
    text-align: center;
    position: relative;
 }
@@ -244,8 +217,34 @@ p {
    cursor: pointer;
    position: relative;
 }
-.navbar .navbar-nav > li .active {
-   background: none;
+
+.navbar .navbar-nav > li > a:before,
+.navbar .navbar-nav .active:before,
+.navbar .navbar-nav > li > a:after,
+.navbar .navbar-nav .active:after {
+   height: 1px;
+   position: absolute;
+   content: '';
+   -webkit-transition: all 0.35s ease;
+   transition: all 0.35s ease;
+   background-color: var(--theme-clr);
+   width: 0;
+   z-index: 6666;
+}
+.navbar .navbar-nav > li > a:before {
+   top: 0;
+   right: 0;
+}
+.navbar .navbar-nav > li > a:after {
+   bottom: 0;
+   left: 0;
+}
+
+.navbar .navbar-nav > li > a:hover:before,
+.navbar .navbar-nav .active:before,
+.navbar .navbar-nav > li > a:hover:after,
+.navbar .navbar-nav .active:after {
+   width: 100%;
 }
 
 .nav-scroll {
@@ -265,7 +264,7 @@ p {
    padding-top: 5px;
 }
 .nav-scroll .logo span {
-   color: #3b414c;
+   color: var(--theme-clr);
 }
 .nav-scroll .navbar-nav > li > a {
    color: #111 !important;
@@ -278,34 +277,8 @@ p {
    float: left;
    padding-top: 15px;
 }
-
-.navbar .navbar-nav > li > a:before,
-.navbar .navbar-nav .active:before,
-.navbar .navbar-nav > li > a:after,
-.navbar .navbar-nav .active:after {
-   height: 1px;
-   position: absolute;
-   content: '';
-   -webkit-transition: all 0.35s ease;
-   transition: all 0.35s ease;
-   background-color: #3b414c;
-   width: 0;
-   z-index: 6666;
-}
-.navbar .navbar-nav > li > a:before {
-   top: 0;
-   right: 0;
-}
-.navbar .navbar-nav > li > a:after {
-   bottom: 0;
-   left: 0;
-}
-
-.navbar .navbar-nav > li > a:hover:before,
-.navbar .navbar-nav .active:before,
-.navbar .navbar-nav > li > a:hover:after,
-.navbar .navbar-nav .active:after {
-   width: 100%;
+.logo span {
+   color: #fff;
 }
 /* -------------------------------------------------------
                      Header 
@@ -530,17 +503,17 @@ p {
    margin-bottom: 15px;
    font-weight: 600;
 }
-.hero .hero-info .data {
+.hero .hero-info .row {
    margin-top: 40px;
 }
-.hero .hero-info .data div {
+.hero .hero-info .row div {
    padding: 0;
 }
-.hero .hero-info .data li {
+.hero .hero-info .row li {
    margin-bottom: 15px;
    font-weight: 500;
 }
-.hero .hero-info .data li span {
+.hero .hero-info .row li span {
    padding-left: 5px;
    color: #a7a7a7;
    font-weight: 400;
@@ -1422,3 +1395,37 @@ footer p {
 }
 
 /*# sourceMappingURL=style.css.map */
+.nav-scroll .logo span,
+.hero .hero-info .order .botn,
+.skills .numbers .num-info h5,
+.resume .item .date,
+.blog .item .img-post .date,
+.clients .owl-carousel:after,
+.clients h6,
+.contact .info .item .icon {
+   color: var(--theme-clr) !important;
+}
+
+.hero .hero-info .order .botn-bg {
+   color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:after,
+.navbar-default .navbar-nav > li > a:before,
+.header .caption .botn:hover,
+.hero .hero-info .order .botn-bg,
+.skills .skills-info .item .skills-progress span,
+.resume .botn,
+.services .item .icon,
+.portfolio .filtering span:after,
+.portfolio .filtering span:before,
+.portfolio .item-img .icon:hover,
+.contact .form input[type='submit'] {
+   background: var(--theme-clr) !important;
+}
+
+.header .caption .botn:hover,
+.hero .hero-info .order .botn,
+.contact .form input[type='submit'] {
+   border-color: var(--theme-clr) !important;
+}

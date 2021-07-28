@@ -39,6 +39,10 @@
       <!-- Font Icon Core CSS -->
       <link rel="stylesheet" href="css/font-awesome.min.css" />
       <link rel="stylesheet" href="css/et-line.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+      />
 
       <!-- Core Style Css -->
       <link rel="stylesheet" href="css/style.css" />
@@ -71,7 +75,7 @@
          <button value="red" class="red"></button>
          <button value="skyblue" class="skyblue"></button><br />
          <button value="main" class="main">Reset</button>
-         <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
+         <div class="icon"><i class="bx bx-cog bx-spin"></i></div>
       </div>
       <!-- ====== Navgition ======  -->
       <header class="sticky-top">
@@ -95,7 +99,7 @@
                   class="collapse navbar-collapse d-lg-flex justify-content-end"
                   id="navbarNav"
                >
-                  <ul class="nav navbar-nav navbar-right">
+                  <ul class="nav navbar-nav navbar-right pb-15">
                      <li class="nav-item">
                         <a
                            class="active nav-link"
@@ -105,10 +109,25 @@
                         >
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#hero">Features</a>
+                        <a class="nav-link" href="#about">About</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#skills">Pricing</a>
+                        <a class="nav-link" href="#skills">Skills</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
                      </li>
                   </ul>
                </div>
@@ -134,13 +153,11 @@
       <!-- ====== End Header ======  -->
 
       <!-- ====== Hero ======  -->
-      <section id="hero" class="hero section-padding">
+      <section id="about" class="hero section-padding">
          <div class="container">
             <div class="row">
-               <div class="section-border">
-                  <div class="content">
                      <div class="col-md-4">
-                        <div class="hero-img">
+                        <div class="hero-img"data-tilt data-tilt-max="30" data-tilt-speed="50" data-tilt-perspective="500">
                            <img src="img/hero.jpg" alt="hero-img" />
                            <!-- social Icon -->
                            <div class="social-icon">
@@ -187,7 +204,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-offset-1 col-md-7">
+                     <div class="offset-md-1 col-md-7">
                         <div class="hero-info">
                            <h4 class="main-title">About Me.</h4>
                            <h5>I Am UI / UX Developer</h5>
@@ -200,10 +217,10 @@
                               velit esse.
                            </p>
 
-                           <div class="data">
-                              <div class="col-sm-6">
-                                 <ul>
-                                    <li>Name : <span>Alex Smith</span></li>
+                           <div class="row">
+                              <div class="col-md-6">
+                                 <ul  class="ps-3">
+                                    <li>Name : <span>Abu Talha</span></li>
                                     <li>
                                        Date Of Birth :
                                        <span>27 February 1990</span>
@@ -215,7 +232,7 @@
                                     </li>
                                  </ul>
                               </div>
-                              <div class="col-sm-6">
+                              <div class="col-md-6">
                                  <ul>
                                     <li>
                                        Email :
@@ -230,7 +247,7 @@
                                  </ul>
                               </div>
                               <div class="clear-fix"></div>
-                              <div class="order">
+                              <div class="order ps-3">
                                  <a class="butn" href="#" data-scroll-nav="7"
                                     >Hire Me<span></span
                                  ></a>
@@ -562,7 +579,7 @@
 
       <!-- ====== Portfolio ======  -->
       <section
-         id="portfolio"
+         id="work"
          class="portfolio section-padding"
          data-scroll-index="5"
       >
@@ -1145,6 +1162,7 @@
 
       <!-- isotope.pkgd.min js -->
       <script src="js/isotope.pkgd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
       <!-- validator js -->
       <script src="js/validator.js"></script>

@@ -24,6 +24,33 @@ $(function() {
 
     });
 
+
+    $(".blue").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "#7e6df6");
+    });
+    $(".gold").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "gold");
+    });
+    $(".green").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "green");
+    });
+    $(".pink").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "pink");
+    });
+    $(".purple").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "purple");
+    });
+    $(".red").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "red");
+    });
+    $(".skyblue").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "skyblue");
+    });
+    $(".main").click(function () {
+        $("body").get(0).style.setProperty("--theme-clr", "#3b414c");
+    });
+    
+
     // typejs
     $('.header .caption h6').typed({
         strings: ["Web Developer", "UI/UX  Designer", "Photography"],
